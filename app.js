@@ -26,7 +26,10 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
+//app.use(express.bodyParser({uploadDir:'./uploads'}));
+
 require('./routes/mediastream')(app);
+require('./routes/mediaupload')(app);
 
 app.get('/', routes.index);
 
